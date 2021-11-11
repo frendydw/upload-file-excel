@@ -12,6 +12,12 @@ export class AppComponent {
   filename: string;
   data: any;
 
+  checked = false;
+
+  toggle(checked: boolean) {
+    this.checked = checked;
+  }
+
   onFileChange(event: any) {
     const start = performance.now();
     /* wire up file reader */

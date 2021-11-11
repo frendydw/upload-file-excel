@@ -16,15 +16,20 @@ export class UploadImportComponent implements OnInit {
   title = 'upload-file-excel';
   filename: string;
   data: any;
+  isLargeFile: boolean;
 
   loading = false;
  
-  onFileChange(event: any) {
+  onFileChange(event: any): void {
     this.loading = true;
     const start = performance.now();
     /* wire up file reader */
     const target: DataTransfer = <DataTransfer>(event.target);
     this.filename = event.target.files[0].name;
+    const fileSize = target.files[0].size;
+
+    this.isLargeFile = fileSize > 1000000 ?  true : false;
+
     if (target.files.length !== 1) {
       throw new Error('Cannot use multiple files');
     }
@@ -48,7 +53,7 @@ export class UploadImportComponent implements OnInit {
     };
   }
 
-  getHeaders() {
+  getHeaders(): Array<any> {
     let headers: string[] = [];
     if(this.data) {
       this.data.forEach((value) => {

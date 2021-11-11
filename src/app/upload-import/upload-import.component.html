@@ -18,7 +18,7 @@
             <span class="sr-only">Loading...</span>
         </div>
 
-        <table class="table">
+        <table class="table" *ngIf = "!isLargeFile">
             <thead>
                 <tr>
                     <th *ngFor="let header of getHeaders()">{{header}}</th>
@@ -31,5 +31,5 @@
             </tbody>
         </table>
 
-        <nb-layout-column>
+    <nb-layout-column>
 <nb-layout>

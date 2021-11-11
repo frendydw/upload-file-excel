@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UploadComponent } from './upload/upload.component';
-import { NbThemeModule, NbButtonModule, NbLayoutModule, NbCardModule } from '@nebular/theme';
+import { NbThemeModule, NbButtonModule, NbLayoutModule, NbCardModule, NbSpinnerModule } from '@nebular/theme';
 import { RouterModule } from '@angular/router';
 
 
@@ -24,6 +24,7 @@ import { RouterModule } from '@angular/router';
     NbButtonModule,
     NbLayoutModule,
     NbCardModule,
+    NbSpinnerModule,
     NbThemeModule.forRoot(),
   ],
   providers: [],

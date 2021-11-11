@@ -12,13 +12,10 @@ export class AppComponent {
   filename: string;
   data: any;
 
-  checked = false;
-
-  toggle(checked: boolean) {
-    this.checked = checked;
-  }
-
+  loading = false;
+ 
   onFileChange(event: any) {
+    this.loading = true;
     const start = performance.now();
     /* wire up file reader */
     const target: DataTransfer = <DataTransfer>(event.target);
@@ -42,6 +39,7 @@ export class AppComponent {
       console.log(this.data); // Data will be logged in array format containing objects
       const end = performance.now();
       console.log(end - start);
+      this.loading = false;
     };
   }
 

@@ -24,6 +24,7 @@
     "@nebular/theme": "^8.0.0",
     "bootstrap": "^4.6.1",
     "jquery": "^3.6.0",
+    "lodash-es": "^4.17.21",
     "ng-bootstrap": "^1.6.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

@@ -1,14 +1,17 @@
 <nb-layout>
   <nb-layout-column>
-
-    <div class="m-3">
+    <div class="m-3 text-center">
+      <h2 class="mb-5">Upload Data Master</h2>
       <div class="row">
-        <div class="col-lg-3">
-          <label for="files" class="btn btn-secondary" nbButton>Select Excel File</label>
-          <input nbButton hidden id="files" type="file" (change)="onFileChange($event)" multiple="false" class="mb-3">
-          {{filename}}
+        <div class="col-md">
+          <button nbButton status="primary">Import Excel</button>
+        </div>
+
+        <div class="col-md">
+          <button nbButton status="success">Export Excel</button>
         </div>
       </div>
+      
     </div>
 
     <div class="spinner-border text-primary m-3" role="status" *ngIf="loading">

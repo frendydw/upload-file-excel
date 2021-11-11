@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "xlsx"
+           ],
             "outputPath": "dist/upload-file-excel",
             "index": "src/index.html",
             "main": "src/main.ts",

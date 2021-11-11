@@ -3,22 +3,16 @@
         <div class="mb-3">
             <a href="./">back</a>
         </div>
-        <div>
-            <div class="row">
-                <div class="col-lg-3">
-                    <label for="files" class="btn btn-secondary" nbButton>Select Excel File</label>
-                    <input nbButton hidden id="files" type="file" (change)="onFileChange($event)" multiple="false"
-                        class="mb-3">
-                    {{filename}}
-                </div>
-            </div>
-        </div>
+
+        <a nbButton status="success" style="cursor: pointer" (click)="exportexcel()" class="m-3">
+            Export Table
+          </a>
 
         <div class="spinner-border text-primary m-3" role="status" *ngIf="loading">
             <span class="sr-only">Loading...</span>
         </div>
 
-        <table class="table">
+        <table class="table" id="excel-table">
             <thead>
                 <tr>
                     <th *ngFor="let header of getHeaders()">{{header}}</th>

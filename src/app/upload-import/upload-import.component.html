@@ -14,11 +14,11 @@
             </div>
         </div>
 
-        <div class="spinner-border text-primary m-3" role="status" *ngIf="loading">
+        <div class="spinner-border text-primary m-3" role="status" *ngIf="loading and !isLargeFile">
             <span class="sr-only">Loading...</span>
         </div>
 
-        <table class="table" *ngIf = "!isLargeFile">
+        <table class="table" *ngIf="!isLargeFile">
             <thead>
                 <tr>
                     <th *ngFor="let header of getHeaders()">{{header}}</th>
@@ -31,5 +31,9 @@
             </tbody>
         </table>
 
-    <nb-layout-column>
-<nb-layout>
+        <div *ngIf="isLargeFile">
+            <span>File too large!</span>
+        </div>
+
+        <nb-layout-column>
+            <nb-layout>

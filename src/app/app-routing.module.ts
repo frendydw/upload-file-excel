@@ -17,6 +17,11 @@ const routes: Routes = [
     loadChildren: () => import('./upload-export/upload-export.module')
       .then(m => m.UploadExportModule),
   },
+  {
+    path: 'fdm-chart',
+    loadChildren: () => import('./fdm-chart/fdm-chart.module')
+      .then(m => m.FdmChartModule),
+  },
 ];
 
 @NgModule({

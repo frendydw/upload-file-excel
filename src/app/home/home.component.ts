@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   loading = false;
  
-  onFileChange(event: any) {
+  onFileChange(event: any) : void {
     this.loading = true;
     const start = performance.now();
     /* wire up file reader */
@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
     };
   }
 
-  getHeaders() {
+  getHeaders() : Array<any> {
     let headers: string[] = [];
     if(this.data) {
       this.data.forEach((value) => {
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
     return headers;
   }
 
-  goToPage(pageName:string){
+  goToPage(pageName:string) : void{
     this.router.navigate([`${pageName}`]);
   }
 }

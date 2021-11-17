@@ -18,7 +18,7 @@ export class UploadExportComponent implements OnInit {
   data: any;
   loading = false;
 
-  readExcelFile() {
+  readExcelFile() : void {
     this.loading = true;
     const start = performance.now();
     const excelPath = '../../assets/excels/file_example_XLSX_50.xlsx'
@@ -59,7 +59,7 @@ export class UploadExportComponent implements OnInit {
     reader.send();
   }
 
-  getHeaders() {
+  getHeaders() : Array<any> {
     let headers: string[] = [];
     if (this.data) {
       this.data.forEach((value) => {

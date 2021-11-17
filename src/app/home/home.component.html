@@ -3,8 +3,15 @@
       <div class="m-3 text-center">
         <h2 class="mb-5">Upload Data Master</h2>
         <div class="row">
-          <div class="col-md">
-            <button nbButton status="primary" (click)="goToPage('upload-import')">Import Excel</button>
+
+          <div class="dropdown col-md">
+            <button nbButton status="primary" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Import Excel
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a nbButton class="dropdown-item" href="upload-import">General</a>
+              <a nbButton class="dropdown-item" href="upload-data-master">Data Master</a>
+            </div>
           </div>
   
           <div class="col-md">

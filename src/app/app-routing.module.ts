@@ -22,6 +22,11 @@ const routes: Routes = [
     loadChildren: () => import('./fdm-chart/fdm-chart.module')
       .then(m => m.FdmChartModule),
   },
+  {
+    path: 'upload-data-master',
+    loadChildren: () => import('./upload-data-master/upload-data-master.module')
+      .then(m => m.UploadDataMasterModule),
+  },
 ];
 
 @NgModule({

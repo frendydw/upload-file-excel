@@ -43,6 +43,7 @@ export class UploadExportComponent implements OnInit {
       const worksheet = workbook.Sheets[first_sheet_name];
       const json: any[] = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], { header: 1, raw: true });
       const header = json[0];
+      console.log(header);
       const dataExcel = json.slice(1);
 
       this.data = dataExcel.map(value => {
